@@ -6,6 +6,7 @@ const controller = require('../../controllers/api');
 const router = express.Router();
 
 router.post('/todos', bodyParser.json({}), (req, res, next) => {
+  console.log(req.body);
   const text = req.body.text;
 
   controller.createTodo({ text });
